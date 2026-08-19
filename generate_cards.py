@@ -1,6 +1,5 @@
 from PIL import Image,ImageDraw,ImageFont
 from pathlib import Path
-import textwrap,os
 W,H=1080,1350; NAVY=(20,35,52); GOLD=(190,145,55); WHITE=(248,248,246); DARK=(35,42,48)
 out=Path('linkedin'); out.mkdir(exist_ok=True)
 bp='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'; fp='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
@@ -29,3 +28,4 @@ for pi,(topic,slides) in enumerate(posts,1):
    else:d.text((70,y),l,font=B,fill=DARK);y+=60
   d.rounded_rectangle((55,H-205,W-55,H-55),radius=28,fill=NAVY);d.text((85,H-175),'Soluciones simples. Resultados reales.',font=BR,fill=WHITE);d.text((85,H-125),'ecompymes.com.ar · WhatsApp +54 9 11 3956-4280',font=S,fill=(230,214,175))
   im.save(out/f'linkedin_{pi:02d}_{si:02d}.png',optimize=True)
+# generated for EcomPymes LinkedIn
